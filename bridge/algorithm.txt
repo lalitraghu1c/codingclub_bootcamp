@@ -1,0 +1,5 @@
+for [siddu=1;siddu<10;siddu++]
+	do
+		echo $siddu
+
+	done

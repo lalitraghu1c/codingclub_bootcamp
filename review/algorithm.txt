@@ -1,0 +1,14 @@
+1. Create review folder manually.
+2. Make 6 files add.java, sub.py, multiply.js, division.html, algorithm.txt and day4.sh by using linux command.
+3. Create a folder named backup by using linux command.
+4. Create a sub-folder inside backup named main folder by using linux command.
+5. Again Create a sub-folder inside main named Java/ Python/ Js/ Html/ by using linux command.
+6. Create a folder and copy file->
+                        inside java/ --> add/ --> add.java
+                        inside python/ --> sub/ --> sub.py
+                        inside js/ --> multiply/ --> multiply.js
+                        inside html/ --> division/ --> division.html
+
+
+
+

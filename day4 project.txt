@@ -1,0 +1,81 @@
+ALGORITHM --->
+
+
+1. Create review folder manually.
+2. Make 6 files add.java, sub.py, multiply.js, division.html, algorithm.txt and day4.sh by using linux command.
+3. Create a folder named backup by using linux command.
+4. Create a sub-folder inside backup named main folder by using linux command.
+5. Again Create a sub-folder inside main named Java/ Python/ Js/ Html/ by using linux command.
+6. Create a folder and copy file->
+                        inside java/ --> add/ --> add.java
+                        inside python/ --> sub/ --> sub.py
+                        inside js/ --> multiply/ --> multiply.js
+                        inside html/ --> division/ --> division.html
+
+PROGRAMING USING LINUX--->
+
+
+for a in `ls | grep java`
+do
+        javafoldername=`echo $a | awk -F. '{print$2}'`
+if [ -d $javafoldername ]
+then
+        echo "Folder exist"
+        rm -rf $javafoldername
+else
+        echo "Creating folder for java"
+fi
+        mkdir $javafoldername -p $javafoldername/add
+        cp -r $a $javafoldername/add
+done
+
+for b in `ls | grep py`
+do
+        pythonfoldername=`echo $b | awk -F. '{print$2}'`
+if [ -d $pythonfoldername ]
+then
+        echo "Folder exist"
+        rm -rf $pythonfoldername
+else
+        echo "Creating folder for python"
+fi
+        mkdir $pythonfoldername -p $pythonfoldername/sub
+        cp -r $b $pythonfoldername/sub
+done
+
+for c in `ls | grep js`
+do
+        jsfoldername=`echo $c | awk -F. '{print$2}'`
+if [ -d $jsfoldername ]
+then
+        echo "Folder exist"
+        rm -rf $jsfoldername
+else
+        echo "Creating folder for js"
+fi
+        mkdir $jsfoldername -p $jsfoldername/multiply
+        cp -r $c $jsfoldername/multiply
+done
+
+for d in `ls | grep html`
+do
+        htmlfoldername=`echo $d | awk -F. '{print$2}'`
+if [ -d $htmlfoldername ]
+then
+        echo "Folder exist"
+        rm -rf $htmlfoldername
+else
+        echo "Creating folder for html"
+fi
+        mkdir $htmlfoldername -p $htmlfoldername/division
+        cp -r $d $htmlfoldername/division
+done
+
+        mkdir backup -p backup/main
+        mv java backup/main
+        mv py backup/main
+        mv js backup/main
+        mv html backup/main
+        mv backup ../../desktop
+
+
